@@ -6,7 +6,7 @@ return(
 <div id="hola">
 <h3>{props.subtitle}</h3>
 {props.mytext}
-</div>
+</div> 
 ) 
  } */
 class Helloworld extends React.Component{
