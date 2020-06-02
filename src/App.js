@@ -12,19 +12,29 @@ return(
 class Helloworld extends React.Component{
 
 state = {
-  show: false
+  show: true
+}
+
+toogleShow = () =>{
+   this.setState({show: !this.state.show })
 }
 
   render(){
     if (this.state.show){
       return(
-        <div id="hola">
+        <div id="hola">  
         <h3>{this.props.subtitle}</h3>
         {this.props.mytext}
+        <button onClick={this.toogleShow}>Toggle show</button>
         </div>
       )
     }else{
-      return <h1>There are not elements</h1>
+      return <h1>
+        There are not elements
+         <button onClick={this.toogleShow}>
+           Toggle Show
+         </button>
+        </h1>
     }
     
   }
